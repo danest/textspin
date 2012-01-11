@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Text Spin Demo Template</title>
+	<script src="jq.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script src="textspin.js" type="text/javascript" charset="utf-8"></script>
+	
+	<style type="text/css" media="screen">
+		#ts-container {
+			display:inline-block;
+			position:relative;
+			height:30px;
+			width:120px;
+		}
+		.ts-word-one {
+			  display:block;
+			  position:absolute;
+		}
+		.ts-word-two {
+			display:none;
+			position:absolute;
+		}
+	</style>
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			//add words here into the array
+			var words = ['sample','sample2','sample3'];
+			$('#ts-container').textSpin(words);
+		});
+	</script>
+	
+</head>
+
+<body>
+	<h1>Text Spinner jQuery Plugin Template</h1>
+	<div id='container'>
+		<p> 
+			<span id="ts-container">
+					<span class="ts-word-one">words</span><span class="ts-word-two"></span> 
+			</span>
+		</p>
+	</div>
+	</div>
+</body>
+<html>
+
+

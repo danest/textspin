@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Text Spin Demo</title>
+	<link rel="stylesheet" type="text/css" href="http://drnicwilliams.com/external/CodeHighlighter/styles.css"></link>
+	<script src="http://drnicwilliams.com/external/CodeHighlighter/clean_tumblr_pre.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script src="textspin.js" type="text/javascript" charset="utf-8"></script>
+	
+	<style type="text/css" media="screen">
+	
+		body{
+			color: #140F0C;
+			font:16px/1.4em garamond;
+			background: #798D84;
+		}
+		p {
+			line-height:.8em;
+		}
+		#container {
+			background: #FFE29E;
+			width:800px;
+			margin:0 auto;
+			padding:5px;
+			text-align:center;
+			box-shadow: inset 0 0 1px #000000;
+			border:1px solid #FFFEEF;
+		}
+		.ts{
+			font: 50px/1.625em "Varela Round", "lucida grande", tahoma, sans-serif;
+			font-weight: 400;
+		}
+		#ts-container {
+			display:inline-block;
+			position:relative;
+			height:60px;
+			width:120px;
+		}
+		#ts-container-two {
+			display:inline-block;
+			position:relative;
+			height:60px;
+			width:165px;
+		}
+		.ts-word-one {
+			  display:block;
+			  position:absolute;
+		}
+		.ts-word-two {
+			display:none;
+			position:absolute;
+		}
+	</style>
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			var words = ['SPIN','RUN', 'JUMP', 'PLAY']
+			$('#ts-container').textSpin(words);
+			var words = ['adorable', 'beautiful', 'glamorous', 'magnificent'];
+			$("#ts-container-two").textSpin(words);
+		});
+	</script>
+	
+</head>
+
+<body>
+	<h1>Text Spinner jQuery Plugin</h1>
+	<div id='container'>
+		<p class="ts"> I want to    
+			<span id="ts-container">
+					<span class="ts-word-one">SPIN</span><span class="ts-word-two"></span> 
+			</span> with you.
+		</p>
+		<p class="ts"> We are   
+			<span id="ts-container-two">
+					<span class="ts-word-one">adorable</span><span class="ts-word-two"></span> 
+			</span> 
+		</p>
+	</div>
+	
+	<div id="code">
+		<h1>Setting up the HTML</h1>
+		<p> In order to get the text spinner to work we need to set up some markup to have it run smoothly</p>
+		<p> We need to set up span container that can be anything I have named mine 'ts-container' after that you need two other spans that spin/rotate the text.</p>
+		<p>
+			You need to set them up as 'ts-word-one' and 'ts-word-two'
+		</p>
+		<pre><code class="html">
+			&lt;p class="ts"> I want to 
+			    &lt;span id="ts-container">
+				    &lt;span class="ts-word-one">SPIN &lt;/span>&lt;span class="ts-word-two">&lt;/span> 
+				&lt;/span> 
+				with you.
+			&lt;/p>
+		</code></pre>
+		<h1>Setting up the javascript</h1>
+		<p>
+			We need to include the jquery library and the jquery-ui library in order to make the plugin work.
+		</p>
+		<h1>Setting up the CSS</h1>
+		<pre><code class="css">
+			#ts-container-one {
+				display:inline-block;
+				position:relative;
+				height:60px; //change this base on your font size
+				width:165px; //change this base on your font size
+			}
+			/* these two are needed to make it work and display correctly */
+			.ts-word-one {
+				  display:block;
+				  position:absolute;
+			}
+			.ts-word-two {
+				display:none;
+				position:absolute;
+			}
+		</code></pre>
+		<pre><code class="javascript">
+		$(document).ready(function(){
+			var words = ['SPIN','RUN', 'JUMP', 'PLAY']
+			$('#ts-container').textSpin(words);
+			var words = ['adorable', 'beautiful', 'glamorous', 'magnificent'];
+			$("#ts-container-two").textSpin(words);
+		});
+		</code></pre>
+	</div>
+	<div id="template">
+		<h2>Here is an empty template to help get you started</h2>
+		<a href="template.html" id="" title="template">Template</a>
+	</div>
+</body>
+<html>
+
+
